@@ -305,15 +305,15 @@
 
   if (copyPhone) {
     copyPhone.addEventListener("click", function () {
-      var phone = "+55 91 99205-3457";
+      var email = "luizlobato@alu.ufc.br";
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(phone).then(function () {
-          showToast("Telefone copiado");
+        navigator.clipboard.writeText(email).then(function () {
+          showToast("E-mail copiado");
         }).catch(function () {
-          showToast(fallbackCopy(phone) ? "Telefone copiado" : "Não foi possível copiar");
+          showToast(fallbackCopy(email) ? "E-mail copiado" : "Não foi possível copiar");
         });
       } else {
-        showToast(fallbackCopy(phone) ? "Telefone copiado" : "Não foi possível copiar");
+        showToast(fallbackCopy(email) ? "E-mail copiado" : "Não foi possível copiar");
       }
     });
   }
