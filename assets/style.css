@@ -486,12 +486,7 @@ html.dark .icon-moon {
 
 .stat {
   padding: 0 12px;
-  border-right: 1px solid rgba(255, 255, 255, 0.12);
   text-align: center;
-}
-
-.stat:last-child {
-  border-right: 0;
 }
 
 .stat-number {
