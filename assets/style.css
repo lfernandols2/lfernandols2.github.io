@@ -580,20 +580,6 @@ html.dark .icon-moon {
   box-shadow: var(--shadow-sm);
 }
 
-.profile-photo {
-  margin: -22px -22px 18px;
-  overflow: hidden;
-  border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
-  background: var(--navy);
-}
-
-.profile-photo img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-}
-
 .profile-card-head {
   display: flex;
   align-items: center;
