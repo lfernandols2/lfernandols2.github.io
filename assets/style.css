@@ -468,19 +468,22 @@ html.dark .icon-moon {
   -webkit-backdrop-filter: blur(12px);
 }
 
-.monogram {
-  display: grid;
-  place-items: center;
-  width: 82px;
-  height: 82px;
+.hero-portrait {
+  width: 104px;
+  height: 104px;
   margin-bottom: 18px;
-  border-radius: 24px;
-  background: linear-gradient(135deg, #f1d58a, #c49a3a);
-  color: #081527;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 30px;
-  letter-spacing: 0.02em;
+  padding: 4px;
+  border: 1px solid rgba(241, 213, 138, 0.45);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.06);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+}
+
+.hero-portrait img {
+  width: 100%;
+  height: 100%;
+  border-radius: 23px;
+  object-fit: cover;
 }
 
 .hero-card-label {
@@ -659,13 +662,26 @@ html.dark .icon-moon {
 }
 
 .profile-card {
-  position: sticky;
-  top: calc(var(--nav-h) + 24px);
+  position: static;
   padding: 22px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--paper);
   box-shadow: var(--shadow-sm);
+}
+
+.profile-photo {
+  margin: -22px -22px 18px;
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+  background: var(--navy);
+}
+
+.profile-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
 }
 
 .profile-card-head {
@@ -674,19 +690,6 @@ html.dark .icon-moon {
   gap: 13px;
   padding-bottom: 17px;
   border-bottom: 1px solid var(--line);
-}
-
-.profile-avatar {
-  display: grid;
-  flex: 0 0 auto;
-  place-items: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
-  background: var(--navy);
-  color: var(--gold);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 19px;
 }
 
 .profile-card-head h3 {
@@ -1577,10 +1580,6 @@ html:not(.js) .tab-panel {
 
   .hero-card {
     max-width: 440px;
-  }
-
-  .profile-card {
-    position: static;
   }
 
   .research-grid {
